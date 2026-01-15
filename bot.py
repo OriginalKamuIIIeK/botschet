@@ -79,7 +79,6 @@ def add_money(message):
 📊 Курс: {data['rate']} | %: {data['percent']}
 💵 *USDT:* {usdt:.2f}
 📉 *Комиссия:* {fee:.2f}
-💰 *Чистыми:* {net:.2f}
 📈 *Баланс:* {data['balance']:.2f} USDT
         """
         bot.reply_to(message, reply, parse_mode='Markdown')
@@ -172,6 +171,5 @@ def other_commands(message):
         """
         bot.reply_to(message, reply, parse_mode='Markdown')
 
-print("🚀 Бот запущен на Railway!")
 print(f"👑 Админ ID: {ADMIN}")
 bot.infinity_polling(timeout=60, long_polling_timeout=5)
